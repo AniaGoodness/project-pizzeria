@@ -74,19 +74,15 @@
     initAccordion(){
       const thisProduct = this;
       /* find the clickable trigger (the element that should react to clicking) */
-      const clickableTriger = article.querySelector(select.menuProduct.clickable);
-      console.log(clickableTriger);
+      thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
       /* START: click event listener to trigger */
-      const buttonTest = document.getElementById('button-test');
-      buttonTest.addEventListener('click', function(){
-      console.log('clicked');
-      });
+      thisProduct.accordionTrigger.addEventListener('click', function(){
         /* prevent default action for event */
         event.preventDefault();
         /* toggle active class on element of thisProduct */
-        thisProduct.classList.add('active');
+        thisProduct.element.classList.toggle('active');
         /* find all active products */
-        const activeProducts = thisProduct.querySelectorAll('.product');
+        const activeProducts = document.querySelectorAll('article.active');
         /* START LOOP: for each active product */
         for (let activeProduct of activeProducts) {
           /* START: if the active product isn't the element of thisProduct */
@@ -98,8 +94,10 @@
         /* END LOOP: for each active product */
         }
       /* END: click event listener to trigger */
+      });
+    }
+  
   }
-}
 
   const app = {
     initMenu: function(){
