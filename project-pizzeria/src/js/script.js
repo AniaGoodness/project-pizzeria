@@ -132,8 +132,11 @@
     }
     initAmountWidget() {
       const thisProduct = this;
-      thisProduct.amountWidgetElem.addEventListener('updated', thisProduct.processOrder());
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+      thisProduct.amountWidgetElem.addEventListener('updated', function(event) {
+        thisProduct.processOrder();
+        console.log(event);
+      });
     }
     processOrder(){
       const thisProduct = this;
@@ -184,11 +187,11 @@
     constructor(element) {
       const thisWidget = this;
       thisWidget.getElements(element);
-      thisWidget = settings.amountWidget.defaultValue;
+      thisWidget.value = settings.amountWidget.defaultValue;
       thisWidget.setValue(thisWidget.input.value);
       thisWidget.initActions();
-      console.log('AmountWidget:' , thisWidget);
-      console.log('constructor arguments:' , element);
+      console.log('AmountWidget:', thisWidget);
+      console.log('constructor arguments:', element);
     }
     getElements(element) {
       const thisWidget = this;
@@ -203,7 +206,7 @@
 
       const newValue = parseInt(value);
       /* TODO: Add validation */
-      if (newValue != thisWidget.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMin) 
+      if (newValue != thisWidget.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) 
       {
         thisWidget.value = newValue;
         thisWidget.announce();
