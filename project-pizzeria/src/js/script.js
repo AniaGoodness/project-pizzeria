@@ -287,7 +287,7 @@
       const thisCart = this;
 
       thisCart.products = [];
-      thisCart.deliveryFee = settings.cart.defaultDeliveryFee;
+
       thisCart.getElements(element);
       thisCart.initActions();
       
@@ -310,8 +310,7 @@
     initActions() {
       const thisCart = this;
       /* dodajemy listener eventu 'click' na elemencie thisCart.dom.toggleTrigger */
-      thisCart.dom.toggleTrigger.addEventListener('click', function(event){
-        event.preventDefault();
+      thisCart.dom.toggleTrigger.addEventListener('click', function(){
         /* toggle'ować klasę zapisaną w classNames.cart.wrapperActive na elemencie thisCart.dom.wrapper */
         thisCart.dom.wrapper.classList.toggle(classNames.cart.wrapperActive);
       });
@@ -319,7 +318,7 @@
         thisCart.update();
       });
       thisCart.dom.productList.addEventListener('remove', function(){
-        thisCart.remove();
+        thisCart.remove(event.detail.cartProduct);
       });
     }
     add(menuProduct) {
@@ -342,7 +341,7 @@
         thisCart.subtotalPrice += product.price;
         thisCart.totalNumber += product.amount;
       }
-      thisCart.totalPrice = thisCart.subtotalPrice + thisCart.deliveryFee;
+      thisCart.totalPrice = thisCart.subtotalPrice * thisCart.totalNumber;
       console.log('thisCart.totaNumber', thisCart.totalNumber);
       console.log('thisCart.subtotalPrice', thisCart.subtotalPrice);
       console.log('thisCart.totalPrice', thisCart.totalPrice);
@@ -352,10 +351,10 @@
         }
       }
     }
-    remove(){
+    remove(cartProduct){
       const thisCart = this;
       const index = thisCart.products.indexOf(cartProduct);
-      thisCart.product.splice(index, 1);
+      thisCart.products.splice(index, 1);
       cartProduct.dom.wrapper.remove();
       thisCart.update();
       
