@@ -1,7 +1,7 @@
 import {select, templates, classNames} from '../settings.js';
-import AmountWidget from './AmountWidget.js';
+import {AmountWidget} from './AmountWidget.js';
 import { utils } from '../utils.js';
-class Product {
+export class Product {
   constructor(id, data){
     const thisProduct = this;
     thisProduct.id = id;
@@ -157,5 +157,3 @@ class Product {
     thisProduct.element.dispatchEvent(event);
   }
 }
-
-export default Product;
