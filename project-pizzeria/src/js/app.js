@@ -1,7 +1,7 @@
 import {settings, select, classNames} from './settings.js';
 import {Product} from './components/Product.js';
 import {Cart} from './components/Cart.js';
-import {AmountWidget} from './components/AmountWidget.js';
+import {Booking} from './components/Booking.js';
 
 const app = {
   initPages: function(){
@@ -47,7 +47,7 @@ const app = {
 
     const bookingContainer = document.querySelector(select.containerOf.booking);
 
-    thisApp.amountWidget = new AmountWidget(bookingContainer);
+    thisApp.booking = new Booking(bookingContainer);
 
   },
 
