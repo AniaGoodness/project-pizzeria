@@ -30,7 +30,7 @@ export class BaseWidget{
 
       thisWidget.value = value;
   }
-  parsevalue(value) {
+  parseValue(value) {
     return parseInt(value);
   }
   isValid(value) {
