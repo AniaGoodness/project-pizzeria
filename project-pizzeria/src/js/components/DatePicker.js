@@ -1,3 +1,6 @@
+/* global flatpickr */
+import {BaseWidget} from './BaseWidget.js';
+import { select, settings } from '../settings.js';
 import { utils } from '../utils.js';
 export class DatePicker extends BaseWidget{
   constructor(wrapper){
@@ -12,45 +15,32 @@ export class DatePicker extends BaseWidget{
 
     const thisWidget = this;
     thisWidget.minDate = new Date(thisWidget.value);
-    thisWidget.maxDate = utils.addDays(thisWidget.minDate, ); 
+    console.log(thisWidget.minDate);
+    thisWidget.maxDate = utils.addDays(thisWidget.minDate, settings.datePicker.maxDaysInFuture); 
     
     flatpickr(thisWidget.dom.input, {
-        defaultDate: thisWidget.minDate,
-        minDate = thisWidget.minDate,
-        maxDate = thisWidget.maxDate,
-        disable: [
+      defaultDate: thisWidget.minDate,
+      minDate: thisWidget.minDate,
+      maxDate: thisWidget.maxDate,
+      locale: {
+        firstDayOfWeek: 1 // start week on Monday
+      },
+      disable: [
         function (date) {
-            // return true to disable
-            return (date.getDay() === 0 || date.getDay() === 6);
-        },
-            
-          ],
-          locale: {
-            firstDayOfWeek: 2 // start week on Thursday
-          },
-          onChange: function (selectedDates, dateStr, instance) {
-        
-          },
-          onOpen: [
-            function (dateStr) {
-                //...
-            },
-            function (dateStr) {
-                //...
-            }
-          ],
-          onClose: function (dateStr) {
-            // ...
-          }
-
-      });
+          // return true to disable
+          return date.getDay() === true;
+        }    
+      ],
+      onChange: function (selectedDates, dateStr) {
+        thisWidget.value = dateStr; 
+      },
+    });
   }
-
-  parseValue(value) {
+  parseValue (value){
     return value;
   }
 
-  isValid(value) {
+  isValid() {
     return true;
   }
   renderValue(){
