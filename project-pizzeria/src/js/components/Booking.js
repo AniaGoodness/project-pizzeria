@@ -80,7 +80,7 @@ export class Booking {
     for (let item of eventsRepeat) {
       if(item.repeat == 'daily'){
         for(let loopDate = minDate; loopDate <= maxDate; loopDate = utils.addDays(loopDate, 1)){
-      thisBooking.makeBooked(util.dateToStr(loopDate), item.hour, item.duration, item.table);
+          thisBooking.makeBooked(utils.dateToStr(loopDate), item.hour, item.duration, item.table);
         }
       }
     }
@@ -102,8 +102,6 @@ export class Booking {
         thisBooking.booked[date][hourBlock] = [];
       }
       thisBooking.booked[date][hourBlock].push(table);
-
-    
 
     }
   }
