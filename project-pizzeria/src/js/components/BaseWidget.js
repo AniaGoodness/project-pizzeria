@@ -23,7 +23,7 @@ export class BaseWidget{
       thisWidget.correctValue = newValue;
       thisWidget.announce();
     }
-    thisWidget.renederValue();
+    thisWidget.renderValue();
   }
   setValue(value){
       const thisWidget = this;
@@ -37,7 +37,7 @@ export class BaseWidget{
     return !isNaN(value);
 
   }
-  renederValue() {
+  renderValue() {
     const thisWidget = this;
     thisWidget.dom.wrapper.innerHTM = thisWidget.value;
   }
