@@ -25,10 +25,10 @@ export class DatePicker extends BaseWidget{
       locale: {
         firstDayOfWeek: 1 // start week on Monday
       },
-      disable: [
+      'disable': [
         function (date) {
           // return true to disable
-          return date.getDay() === true;
+          return (date.getDay() === 1 || date.getDay() === 7);
         }    
       ],
       onChange: function (selectedDates, dateStr) {
