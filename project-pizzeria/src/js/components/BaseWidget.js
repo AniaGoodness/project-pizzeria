@@ -39,7 +39,7 @@ export class BaseWidget{
   }
   renderValue() {
     const thisWidget = this;
-    thisWidget.dom.wrapper.innerHTM = thisWidget.value;
+    thisWidget.dom.wrapper.innerHTML = thisWidget.value;
   }
   announce() {
     const thisWidget = this;

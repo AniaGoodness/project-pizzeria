@@ -24,7 +24,7 @@ export class AmountWidget extends BaseWidget {
             && value >= settings.amountWidget.defaultMin
             && value <= settings.amountWidget.defaultMax;
   }
-  renederValue(){
+  renderValue(){
     const thisWidget = this;
     thisWidget.dom.input.value = thisWidget.value;
   }

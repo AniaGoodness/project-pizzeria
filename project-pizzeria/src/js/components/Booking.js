@@ -121,20 +121,20 @@ export class Booking {
     if(
       typeof thisBooking.booked[thisBooking.date] == 'undefined'
       ||
-      typeof thisBooking.booked[thisBooking.date][thisBooking.hourPicker] == 'undefined'
+      typeof thisBooking.booked[thisBooking.date][thisBooking.hour] == 'undefined'
     ){
       allAvailable = true;
     }
 
     for(let table of thisBooking.dom.tables){
-      let tableId = table.getAtttibute(settings.booking.tableIdAttribute);
+      let tableId = table.getAttribute(settings.booking.tableIdAttribute);
       if(!isNaN(tableId)){
         tableId = parseInt(tableId);
       }
       if(
         !allAvailable
         &&
-        thisBooking.booked[thisBooking.date][thisBooking.hourPicker].includes(tableId) > -1
+        thisBooking.booked[thisBooking.date][thisBooking.hour].includes(tableId)
       ){
         table.classList.add(classNames.booking.tableBooked);
       } else {
@@ -155,6 +155,7 @@ export class Booking {
 
     thisBooking.dom.peopleAmount = thisBooking.dom.wrapper.querySelector(select.booking.peopleAmount);
     thisBooking.dom.hoursAmount = thisBooking.dom.wrapper.querySelector(select.booking.hoursAmount);
+    thisBooking.dom.tables = thisBooking.dom.wrapper.querySelectorAll(select.booking.tables);
   }
   initWidget() {
     const thisBooking = this;
