@@ -216,13 +216,10 @@ export class Booking {
     thisBooking.dom.wrapper.innerHTML = generatedHTML;
     thisBooking.dom.datePicker = thisBooking.dom.wrapper.querySelector(select.widgets.datePicker.wrapper);
     thisBooking.dom.hourPicker = thisBooking.dom.wrapper.querySelector(select.widgets.hourPicker.wrapper);
-
-    element.appendChild(thisBooking.dom.wrapper);
-
     thisBooking.dom.peopleAmount = thisBooking.dom.wrapper.querySelector(select.booking.peopleAmount);
     thisBooking.dom.hoursAmount = thisBooking.dom.wrapper.querySelector(select.booking.hoursAmount);
     thisBooking.dom.tables = thisBooking.dom.wrapper.querySelectorAll(select.booking.tables);
-    thisBooking.dom.starters = thisBooking.dom.wrapper.querySelector(select.booking.starters);
+    thisBooking.dom.starters = thisBooking.dom.wrapper.querySelectorAll(select.booking.starters);
     thisBooking.dom.inputPhone = thisBooking.dom.wrapper.querySelector(select.cart.phone);
     thisBooking.dom.inputAddress = thisBooking.dom.wrapper.querySelector(select.cart.address);
     thisBooking.dom.submit = thisBooking.dom.wrapper.querySelector(select.booking.bookedTable);
@@ -238,7 +235,7 @@ export class Booking {
     thisBooking.dom.wrapper.addEventListener('updated', function(){
       thisBooking.updateDOM();
     });
-    thisBooking.dom.submit.addEventListener('submit', function(){
+    thisBooking.dom.wrapper.addEventListener('submit', function(){
       event.preventDefault();
       thisBooking.sendBooking();
     });
