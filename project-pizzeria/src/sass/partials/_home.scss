@@ -26,15 +26,6 @@ $radius: 6px;
   background-size: cover;
   background-attachment: fixed;
   height: 126px;
-
-  a {
-    color: $color-main;
-    font-size: 26px;
-    font-weight: 500;
-    font-family: $font-header;
-    text-decoration: none;
-    text-align: center;
-  }
 }
 
 .box-order {
@@ -44,22 +35,33 @@ $radius: 6px;
   width: 49%;
   text-align: center;
   margin-bottom: 12px;
-  line-height: 126px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: $radius;
   background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/pizza-1.jpg?raw=true");
 }
 
+.box-order a {
+  color: $color-main;
+  font-size: 26px;
+  font-weight: 500;
+  font-family: $font-header;
+  text-decoration: none;
+}
+
 .hidden-subtitle {
   font-family: $font-text;
-  float: left;
-  max-width: 50%;
   padding-bottom: 0px;
   margin-bottom: 0px;
   font-size: 14px;
-  min-height: 22px;
-  line-height: 22px;
-  display: none;
-  transition: 2s;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  color: $color-main;
+  transition: .5s;
 }
 
 .box-booking {
@@ -68,27 +70,36 @@ $radius: 6px;
   width: 49%;
   text-align: center;
   margin-bottom: 12px;
-  line-height: 126px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: $radius;
   background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/pizza-2.jpg?raw=true");
 }
 
-.box-order:hover {
-  .hidden-subtitle {
-    display: block;
-    color: $color-main;
-  }
+.box-booking a {
+  color: $color-main;
+  font-size: 26px;
+  font-weight: 500;
+  font-family: $font-header;
+  text-decoration: none;
 }
 
-.box-booking:hover {
-  .hidden-subtitle {
-    display: block;
-    color: $color-main;
-  }
+.box-order:hover .hidden-subtitle {
+  display: block;
+  margin-top: 0px;
+  height: 14px;
+  line-height: 14px;
+  opacity: 1;
 }
 
-.link-order {
-  position: absolute;
+.box-booking:hover .hidden-subtitle {
+  display: block;
+  margin-top: 0px;
+  height: 14px;
+  line-height: 14px;
+  opacity: 1;
 }
 
 .hour-wrapper {
@@ -121,6 +132,7 @@ $radius: 6px;
   .data {
     font-family: $font-text;
     padding-bottom: 0px;
+    margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
     min-height: 18px;
