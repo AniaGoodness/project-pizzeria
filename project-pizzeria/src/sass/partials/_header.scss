@@ -1,6 +1,5 @@
 .header {
   padding: ($base-size * 5) 0 ($base-size * 8) 0;
-  background: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/project-pizzeria/src/images/lemongrass/tło_strona.jpg");
   color: $color-light;
 
   &__wrapper {
@@ -57,4 +56,12 @@
 
   }
 
+}
+.navigation {
+  background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
 }
