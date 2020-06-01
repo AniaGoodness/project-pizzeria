@@ -1,6 +1,7 @@
 .header {
   padding: ($base-size * 5) 0 ($base-size * 8) 0;
   color: $color-light;
+  background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
 
   &__wrapper {
     position: relative;
@@ -13,7 +14,7 @@
   line-height: 1;
 
   &__title {
-    margin: 0 0 $base-size 0;
+    margin: 0 0 $base-size 20px;
     font-size: ($base-size * 4);
     font-family: $font-header;
     font-weight: $font-light;
@@ -26,7 +27,7 @@
   }
 
   &__subtitle {
-    margin: 0;
+    margin-left: 20px;
     font-size: ($base-size * 1.5);
     font-weight: $font-light;
     font-style: italic;
@@ -35,9 +36,18 @@
 }
 
 .navigation {
-  position: absolute;
-  background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
-                        
+  display: block;
+  margin-left: 50px;
+
+  .container {
+  float: left;
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 48%;
+  }
+
   ul {
     margin: 0;
     padding: 0;
