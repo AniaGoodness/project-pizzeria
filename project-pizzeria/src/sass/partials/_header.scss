@@ -2,7 +2,7 @@
   padding: ($base-size * 5) 0 ($base-size * 8) 0;
   color: $color-light;
   background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
-
+  background-size: cover;
   &__wrapper {
     position: relative;
   }
@@ -40,12 +40,12 @@
   margin-left: 50px;
 
   .container {
-  float: left;
-  width: 100%;
-  height: auto;
-  display: flex;
-  margin-top: 30px;
-  margin-left: 48%;
+    float: left;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 48%;
   }
 
   ul {
