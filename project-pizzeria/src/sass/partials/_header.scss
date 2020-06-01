@@ -36,8 +36,6 @@
 
 .navigation {
   position: absolute;
-  @include flex(row, flex-start, flex-start);
-  bottom: ($base-size * -8);
   background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
                         
   ul {
