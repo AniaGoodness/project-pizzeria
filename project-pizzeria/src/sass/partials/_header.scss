@@ -34,34 +34,34 @@
 
 }
 
-.main-nav {
+.navigation {
   position: absolute;
   @include flex(row, flex-start, flex-start);
   bottom: ($base-size * -8);
-
-  a {
-    @extend .h2;
-    color: $color-main;
-    text-decoration: none;
-    margin-right: ($base-size * 2);
-    text-align: center;
-    padding: $base-size ($base-size * 2);
-    background: darken($color-dark, 5%);
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
-
-    &.active {
-      background: lighten($color-dark, 75%);
-    }
-
+  background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
+                        
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
   }
 
-}
-.navigation {
-  background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
+  li {
+    display: inline-block;
+    margin: 0 36px 0 0;
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-light;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+
+    &.active {
+      color: $color-dark;
     }
+  }
 }

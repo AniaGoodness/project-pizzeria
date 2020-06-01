@@ -66,7 +66,7 @@ export const select = {
     tables: '.floor-plan .table',
   },
   nav: {
-    links: '.main-nav a, .box-wrapper a',
+    links: '.navigation a, .box-wrapper a',
   },
 };
 
@@ -93,7 +93,7 @@ export const classNames = {
 
 export const settings = {
   hours: {
-    open: 12,
+    open: 10,
     close: 24,
   },
   amountWidget: {
