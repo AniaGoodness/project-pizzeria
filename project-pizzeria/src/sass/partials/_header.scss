@@ -1,7 +1,9 @@
 .header {
   padding: ($base-size * 5) 0 ($base-size * 8) 0;
   color: $color-light;
-  
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 700px;
   background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/background_lemon.jpg");
   background-size: cover;
   background-attachment: fixed;
