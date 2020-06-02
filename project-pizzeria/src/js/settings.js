@@ -94,7 +94,7 @@ export const classNames = {
 export const settings = {
   hours: {
     open: 10,
-    close: 24,
+    close: 22,
   },
   amountWidget: {
     defaultValue: 1,
@@ -102,10 +102,10 @@ export const settings = {
     defaultMax: 9,
   },
   datePicker: {
-    maxDaysInFuture: 14,
+    maxDaysInFuture: 21,
   },
   cart: {
-    defaultDeliveryFee: 20,
+    defaultDeliveryFee: 15,
   },
   booking: {
     tableIdAttribute: 'data-table',
