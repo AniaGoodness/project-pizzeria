@@ -16,90 +16,27 @@ $color-special: #f15151;
   border-bottom: 1px solid lighten($color-dark, 70%);
   border-radius: $radius;
   height: 1200px;
+
+  .container {
+    margin: 20px auto;
+    padding:10px 48px;
+  }
 }
 
-/* .box-wrapper */
+/* about */
 
-.box-wrapper {
-  position: relative;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 126px;
-}
+.about {
+    margin: 0 60px;
+    padding: 0 90px;
 
-.box-order {
-  height: 126px;
-  float: left;
-  margin-right: 2%;
-  width: 49%;
-  text-align: center;
-  margin-bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: $radius;
-  background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/pizza-1.jpg?raw=true");
-}
+  h3 {
+    font-family: $font-header;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
 
-.box-order a {
-  color: $color-main;
-  font-size: 26px;
-  font-weight: 500;
-  font-family: $font-header;
-  text-decoration: none;
-}
 
-.hidden-subtitle {
-  font-family: $font-text;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  font-size: 14px;
-  height: 0px;
-  opacity: 0;
-  overflow: hidden;
-  width: 100%;
-  color: $color-main;
-  transition: .5s;
-}
-
-.box-booking {
-  height: 126px;
-  float: left;
-  width: 49%;
-  text-align: center;
-  margin-bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: $radius;
-  background-image: url("https://github.com/AniaGoodness/project-pizzeria/blob/master/project-pizzeria/src/images/pizza-2.jpg?raw=true");
-}
-
-.box-booking a {
-  color: $color-main;
-  font-size: 26px;
-  font-weight: 500;
-  font-family: $font-header;
-  text-decoration: none;
-}
-
-.box-order:hover .hidden-subtitle {
-  display: block;
-  margin-top: 0px;
-  height: 14px;
-  line-height: 14px;
-  opacity: 1;
-}
-
-.box-booking:hover .hidden-subtitle {
-  display: block;
-  margin-top: 0px;
-  height: 14px;
-  line-height: 14px;
-  opacity: 1;
+  }
 }
 
 .hour-wrapper {
@@ -141,73 +78,12 @@ $color-special: #f15151;
 
 }
 
-/* carousel */
 
-.review-wrapper {
-  display: block;
-  width: 100%;
-  height: auto;
-  float: left;
-  margin-top: 50px;
-}
 
-.slick-track {
-  position: relative;
-  width: 100%;
-}
-
-.carousel {
-  width: 90%;
-  margin: 0px;
-}
-
-.image-review {
-  margin-right: 20px;
-  padding-top: 50px;
-  width: 40%;
-  height: 200px;
-  float: left;
-  position: relative;
-}
-
-.review-title {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.review-content {
-  margin-top: 10px;
-  margin-bottom: 7px;
-}
-
-.review-author {
-  margin-top: 3px;
-}
-
-.carousel-caption {
-  margin-top: 30px;
-  width: 55%;
-  float: left;
-  vertical-align: middle;
-  margin-bottom: 5px;
-}
-
-.slick-slide {
-  float: left;
-  width: 100%;
-  margin: 10px;
-}
-
-.slick-slide img {
-  width: 100%;
-  border: 2px solid #fff;
-  border-radius: $radius;
-  display: block;
-}
 
 /* gallery */
 
-.gallery-wrapper {
+.gallery-container {
   position: relative;
   float: left;
   width: 100%;
