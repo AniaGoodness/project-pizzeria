@@ -10,32 +10,34 @@ $color-special: #f15151;
 }
 
 .home-wrapper {
-  margin: ($base-size * 3.5) auto;
-  padding: ($base-size * 6) ($base-size * 4);
+  margin: 30px auto;
+  padding: 10px ($base-size * 4);
   background: $color-light;
   border-bottom: 1px solid lighten($color-dark, 70%);
   border-radius: $radius;
   height: 1200px;
-
-  .container {
-    margin: 20px auto;
-    padding:10px 48px;
-  }
 }
 
 /* about */
+@mixin image-title {
+  font-family: $font-header;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-light;
+}
 
 .about {
-    margin: 0 60px;
-    padding: 0 90px;
+  margin: 0 60px;
+  padding: 0 90px;
 
   h3 {
     font-family: $font-header;
     font-size: 36px;
     font-weight: 500;
     text-align: center;
-
-
+    margin: 10px 0;
+    padding: 20px 0;
   }
 }
 
@@ -78,12 +80,9 @@ $color-special: #f15151;
 
 }
 
-
-
-
 /* gallery */
 
-.gallery-container {
+.gallery-wrapper {
   position: relative;
   float: left;
   width: 100%;
@@ -92,48 +91,66 @@ $color-special: #f15151;
   margin-top: 100px;
 }
 
-.single-image--wrapper {
-  width: 32.3333%;
-  height: 200px;
-  margin-right: 1%;
-  margin-bottom: 1%;
+.image-large {
+  width: 45%;
+  height: auto;
+  margin: 0;
   float: left;
-  border-radius: $radius;
   overflow: hidden;
   position: relative;
 
   img {
     width: 100%;
-    height: 200px;
     display: block;
-    border-radius: $radius;
     object-fit: cover;
     object-position: 0 10%;
   }
-}
-      
-.single-image--wrapper .icons {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
 
-  top: 0;
-  left: 0;
-  text-align: center;
-  line-height: 200px;
-  z-index: 10;
-  font-size: 30px;
+  h2 {
+    @include image-title;
+  }
 }
 
-i {
+.image-medium {
+  float: left;
+  width: 40%;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 0 10%;
+  }
+
+  h2 {
+    @include image-title;
+  }
+}
+
+.image-hour {
+  float: left;
+  width: 40%;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 0 10%;
+  }
+
+  h2 {
+    @include image-title;
+  }
+}
+
+/* i {
   color: $color-main;
   transition: 0.8s;
 
   &:hover {
     color: $color-special;
   }
-}
+} */
 
 /* footer */
 
