@@ -11,6 +11,26 @@
       ]
     },
     {
+      "id": "cake",
+      "class": "small",
+      "name": "Szarlotka Charlotty",
+      "price": 12,
+      "description": "Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
+      "images": [
+        "<img class=\"active\" src=\"images/doughnut.svg\">"
+      ]
+    },
+    {
+      "id": "ice cream",
+      "class": "small",
+      "name": "Stracciatella Dream",
+      "price": 15,
+      "description": "Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
+      "images": [
+        "<img class=\"active\" src=\"images/doughnut.svg\">"
+      ]
+    },
+    {
       "id": "breakfast",
       "class": "small",
       "name": "Zia Giulia's Breakfast",

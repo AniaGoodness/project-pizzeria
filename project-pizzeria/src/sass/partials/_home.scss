@@ -1,6 +1,4 @@
 /* Global */
-$color-main: #ffff;
-$color-special: #f15151;
 
 #pages {
   > * {
@@ -19,12 +17,14 @@ $color-special: #f15151;
 }
 
 /* about */
-@mixin image-title {
+@mixin img-title {
   font-family: $font-header;
   font-size: 30px;
   font-weight: 500;
   text-align: center;
   color: $color-light;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .about {
@@ -41,7 +41,7 @@ $color-special: #f15151;
   }
 }
 
-.hour-wrapper {
+/* .hour-wrapper {
   position: relative;
   float: left;
   width: 100%;
@@ -78,88 +78,116 @@ $color-special: #f15151;
     line-height: 18px;
   }
 
-}
+} */
 
 /* gallery */
 
 .gallery-wrapper {
   position: relative;
-  float: left;
+  background-position: centaer center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: inline-block;
   width: 100%;
+  max-height: 660px;
   line-height: 15px;
-  height: 420px;
   margin: 100px 0;
 }
 
-.image-large {
-  width: 45%;
+.box-large {
+  width: 49%;
+  height: 660px;
   height: auto;
   margin: 0;
-  float: left;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
-  position: relative;
+  background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/menu.jpg");
 
-  img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: 0 10%;
+  .image-title {
+    margin-top: 530px;
   }
 
   h2 {
-    @include image-title;
+    @include img-title;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-light;
   }
 }
 
-.image-medium {
+.box-wrapper {
   float: left;
-  width: 40%;
+  height: auto;
+  display: block;
+  width: 49%;
+  max-height: 660px;
+  text-align: center;
 
-  img {
-    width: 100%;
+  .box-medium {
     display: block;
-    object-fit: cover;
-    object-position: 0 10%;
+    height: 69%;
+    text-align: center;
+    background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/pizza-3.jpg");
+
+    h2 {
+      @include img-title;
+    }
+
+    a {
+    text-decoration: none;
+    color: $color-light;
+    }
+
+    .image-title {
+      padding-top: 20px;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+    }
   }
 
-  h2 {
-    @include image-title;
-  }
-}
-
-.image-hour {
-  float: left;
-  width: 40%;
-  height: 30%;
-
-  img {
-    width: 100%;
+  .box-hour {
     display: block;
-    object-fit: cover;
-    object-position: 0 10%;
-  }
+    height: 30%;
+    text-align: center;
+    background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/open.jpg");
+    
+    h2 {
+      @include img-title;
+    }
 
-  h2 {
-    @include image-title;
+    .data {
+      font-family: $font-text;
+      color: $color-main;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 14px;
+      min-height: 18px;
+      line-height: 18px;
+    }
   }
 }
 
 
 /* footer */
 .page-footer .container {
-    display: table;
-    margin: 48px auto;
+  display: table;
+  margin: 48px auto;
 
-    ul {
+  ul {
     list-style-type: none;
     display: table;
     text-align: center;
 
-        li {
-            font-size: 0px;
-            display: inline-block;   
-          }
+    li {
+      font-size: 0px;
+      display: inline-block;   
     }
+  }
 }
 
 .page-footer i {
@@ -168,9 +196,9 @@ $color-special: #f15151;
   color: $color-dark;
   transition: 2s;
 
-    &:hover {
-      transform: scale(1.2);
-      color: $color-danger;
-    }
+  &:hover {
+    transform: scale(1.2);
+    color: $color-danger;
+  }
 }
 
