@@ -37,13 +37,13 @@
       "description": "A delicious salad made of fresh, home-grown products on a crispy lettuce base.",
       "images": [
         "<img class=\"active\" src=\"images/lemongrass/menu_soup.jpg\">",
-        "<img class=\"active ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
+        "<img class=\"active ingredients-zucchini\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
         "<img class=\"active ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\">",
-        "<img class=\"active ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\">",
-        "<img class=\"active ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\">",
-        "<img class=\"active ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">",
-        "<img class=\"active ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\">",
-        "<img class=\"active ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\">"
+        "<img class=\"active ingredients-bamboo\" src=\"images/salad/cheese.svg\" style=\"z-index: 3;\">",
+        "<img class=\"active ingredients-mushrooms\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 4;\">",
+        "<img class=\"active ingredients-lime\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 5;\">",
+        "<img class=\"active ingredients-chicken\" src=\"images/salad/feta.svg\" style=\"z-index: 6;\">",
+        "<img class=\"active ingredients-coriander\" src=\"images/salad/herbs.svg\" style=\"z-index: 7;\">"
       ],
       "params": {
         "ingredients": {
@@ -93,13 +93,11 @@
       "description": "A delicious salad made of fresh, home-grown products on a crispy lettuce base.",
       "images": [
         "<img class=\"active\" src=\"images/lemongrass/fish.jpg\">",
-        "<img class=\"active ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
+        "<img class=\"active ingredients-rice\" src=\"images/salad/feta.svg\" style=\"z-index: 1;\">",
         "<img class=\"active ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\">",
-        "<img class=\"active ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\">",
-        "<img class=\"active ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\">",
-        "<img class=\"active ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">",
-        "<img class=\"active ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\">",
-        "<img class=\"active ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\">"
+        "<img class=\"active ingredients-bamboo\" src=\"images/salad/cheese.svg\" style=\"z-index: 3;\">",
+        "<img class=\"active ingredients-avocado\" src=\"images/salad/cucumber.svg\" style=\"z-index: 4;\">",
+        "<img class=\"active ingredients-coriander\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">"
       ],
       "params": {
         "ingredients": {
@@ -121,8 +119,8 @@
               "price": 2,
               "default": true
             },
-            "lime": {
-              "label": "lime",
+            "avocado": {
+              "label": "Avocado",
               "price": 1
             },
             "coriander": {
