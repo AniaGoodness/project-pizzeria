@@ -91,7 +91,7 @@
   width: 100%;
   max-height: 660px;
   line-height: 15px;
-  margin: 100px 0;
+  margin: 100px 50px;
 }
 
 .box-large {
@@ -122,15 +122,14 @@
 
 .box-wrapper {
   float: left;
-  height: auto;
   display: block;
   width: 49%;
-  max-height: 660px;
+  height: 660px;
   text-align: center;
 
   .box-medium {
     display: block;
-    height: 69%;
+    height: 39%;
     text-align: center;
     background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/pizza-3.jpg");
 
@@ -151,7 +150,7 @@
 
   .box-hour {
     display: block;
-    height: 30%;
+    height: 59%;
     text-align: center;
     background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/open.jpg");
     
@@ -182,6 +181,7 @@
     list-style-type: none;
     display: table;
     text-align: center;
+    padding-left: 0;
 
     li {
       font-size: 0px;
