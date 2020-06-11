@@ -14,6 +14,7 @@
   border-bottom: 1px solid lighten($color-dark, 70%);
   border-radius: $radius;
   height: 1200px;
+  align-items: center;
 }
 
 /* about */
@@ -30,6 +31,8 @@
 .about {
   margin: 0 60px;
   padding: 0 90px;
+  margin-bottom: 70px;
+  text-align: center;
 
   h3 {
     font-family: $font-header;
@@ -41,97 +44,35 @@
   }
 }
 
-/* .hour-wrapper {
-  position: relative;
-  float: left;
-  width: 100%;
-  line-height: 15px;
-  height: 126px;
-  bottom: 0px;
-  padding-top: 0px;
-  top: 0px;
-  background-color: $color-special;
-  border-radius: $radius;
-  color: $color-main;
-  text-align: center;
-}
-
-.opening-hours {
-  height: 30px;
-
-  .title {
-    font-family: $font-header;
-    height: 30px;
-    font-size: 26px;
-    font-weight: 500;
-    margin-top: 40px;
-    margin-bottom: 0px;
-  }
-
-  .data {
-    font-family: $font-text;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 14px;
-    min-height: 18px;
-    line-height: 18px;
-  }
-
-} */
-
 /* gallery */
 
-.gallery-wrapper {
-  position: relative;
-  background-position: centaer center;
-  background-size: cover;
-  background-attachment: fixed;
-  display: inline-block;
-  width: 100%;
-  max-height: 660px;
-  line-height: 15px;
-  margin: 100px 50px;
-}
+.gallery {
+  margin: 0 60px;
+  padding: 0 90px;
+  margin-bottom: 70px;
 
-.box-large {
-  width: 49%;
-  height: 660px;
-  height: auto;
-  margin: 0;
-  display: inline-block;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/menu.jpg");
-
-  .image-title {
-    margin-top: 530px;
+  &:after {
+    content: '';
+    display:block;
+    clear:both;
   }
 
-  h2 {
-    @include img-title;
-  }
-
-  a {
-    text-decoration: none;
-    color: $color-light;
-  }
-}
-
-.box-wrapper {
-  float: left;
-  display: block;
-  width: 49%;
-  height: 660px;
-  text-align: center;
-
-  .box-medium {
-    display: block;
-    height: 39%;
+  .box-large {
+    width: 69%;
+    height: 100%;
+    height: auto;
+    margin: 0;
+    float: left;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/pizza-3.jpg");
+    overflow: hidden;
+    background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/menu.jpg");
+    background-size: cover;
+
+    .image-title {
+      margin-top: 500px;
+    }
 
     h2 {
       @include img-title;
@@ -140,39 +81,66 @@
     a {
       text-decoration: none;
       color: $color-light;
-    }
-
-    .image-title {
-      padding-top: 20px;
-      text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+      margin-bottom: 10px;
     }
   }
 
-  .box-hour {
-    display: block;
-    height: 59%;
+  .box-wrapper {
+    float: left;
+    width: 31%;
+    height: auto;
     text-align: center;
-    background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/open.jpg");
-    
-    h2 {
-      @include img-title;
-    }
 
-    .data {
-      font-family: $font-text;
-      color: $color-main;
-      padding-bottom: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 14px;
-      min-height: 18px;
-      line-height: 18px;
+    .box-medium {
+      float: left;
+      width: 100%;
+      height: 300px;
+      text-align: center;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+      background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/pizza-3.jpg");
+
+      h2 {
+        @include img-title;
+        margin-top: 220px;
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $color-light;
+        text-decoration: none;
+      }
+    }
+    
+    .box-hour {
+      float: left;
+      width: 100%;
+      height: 284px;
+      text-align: center;
+      background-image: url("https://raw.githubusercontent.com/AniaGoodness/project-pizzeria/master/project-pizzeria/src/images/lemongrass/open.jpg");
+    
+      h2 {
+        @include img-title;
+        margin-top: 150px;
+        padding-top: 50px;
+        margin-bottom: 0;
+      }
+
+      .data {
+        font-family: $font-text;
+        color: $color-main;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+        min-height: 18px;
+        line-height: 18px;
+      }
     }
   }
 }
 
-
 /* footer */
+
 .page-footer .container {
   display: table;
   margin: 48px auto;
@@ -201,4 +169,3 @@
     color: $color-danger;
   }
 }
-
